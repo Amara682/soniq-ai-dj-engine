@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Home, Compass, AudioLines, Library, Heart, Search, Bell, Play, Pause, SkipBack, SkipForward, Volume2, Plus, Music2, Headphones, Zap, Moon, Sun, Waves, Disc3, LogIn, LogOut, X, ListMusic, Clock3, Trash2, ArrowLeft } from 'lucide-react';
 
-const API = 'http://localhost:5000/api';
+const API = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 const moods = [
   { id: 'chill', label: 'Chill', icon: Moon, color: '#55d6ff' },
   { id: 'focus', label: 'Focus', icon: AudioLines, color: '#9b8cff' },
